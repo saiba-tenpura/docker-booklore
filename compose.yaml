@@ -31,9 +31,8 @@ services:
     restart: unless-stopped
     labels:
       - "traefik.enable=true"
-      - "traefik.http.routers.booklore.rule=HostRegexp(`${BOOKLORE_URL}`)"
+      - "traefik.http.routers.booklore.rule=Host(`${BOOKLORE_URL}`)"
       - "traefik.http.services.booklore.loadbalancer.server.port=${BOOKLORE_PORT}"
-      - "traefik.http.routers.booklore.tls=true"
 
   mariadb:
     image: lscr.io/linuxserver/mariadb:11.4.5

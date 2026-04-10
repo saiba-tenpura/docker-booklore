@@ -31,7 +31,7 @@ services:
     restart: unless-stopped
     labels:
       - "traefik.enable=true"
-      - "traefik.http.routers.booklore.rule=Host(`${BOOKLORE_URL}`)"
+      - "traefik.http.routers.booklore.rule=Host(`${BOOKLORE_DOMAIN}`)"
       - "traefik.http.services.booklore.loadbalancer.server.port=${BOOKLORE_PORT}"
 
   mariadb:

@@ -1,6 +1,6 @@
 services:
   booklore:
-    image: booklore/booklore:v1.17.0
+    image: ghcr.io/booklore-app/booklore:v2.3.1
     container_name: booklore
     environment:
       - USER_ID=${APP_USER_ID}
